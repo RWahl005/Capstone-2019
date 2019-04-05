@@ -8,57 +8,56 @@
 
 var active = false;
 
-var mobile = false;
+var mobileNav = false;
 
-window.onload = init;
-
-window.onresize = res;
+window.addEventListener("load", init);
+window.addEventListener("resize", res);
 
 var ul;
 var navicon;
 var imgNavIcon;
 
-function init(){
+function init() {
     ul = document.getElementById("navigation");
     navicon = document.getElementById("navicon");
     imgNavIcon = navicon.getElementsByTagName("img")[0];
-    if(window.innerWidth < 675){
+    if (window.innerWidth < 675) {
         mobileMode();
-    }else if(window.innerWidth > 675){
+    } else if (window.innerWidth > 675) {
         desktopMode();
     }
     navicon.addEventListener("click", onClick);
 }
 
-function onClick(){
-    if(!active){
+function onClick() {
+    if (!active) {
         ul.style.display = "block";
         imgNavIcon.className = "rotated";
         active = true;
-    }else{
+    } else {
         ul.style.display = "none";
         imgNavIcon.className = "";
         active = false;
     }
 }
 
-function res(e){
-    if(window.innerWidth < 675 && !mobile){
+function res(e) {
+    if (window.innerWidth < 675 && !mobileNav) {
         mobileMode();
-    }else if(window.innerWidth > 675 && mobile){
+    } else if (window.innerWidth > 675 && mobileNav) {
         desktopMode();
     }
 }
 
-function mobileMode(){
-    mobile = true;
+function mobileMode() {
+    mobileNav = true;
     active = false;
     ul.style.display = "none";
     navicon.style.display = "block";
 }
 
-function desktopMode(){
-    mobile = false;
+function desktopMode() {
+    mobileNav = false;
     active = false;
     ul.style.display = "";
     navicon.style.display = "none";
