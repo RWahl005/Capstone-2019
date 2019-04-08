@@ -102,6 +102,7 @@ createEvent(0, 20, 2020, false, "#",
     "<a class='calendarHoliday' onclick='openmenu(\"Event\", \"Martin Luther King Jr. Day - No School.\", \"Martin Luther King Jr. Day\");'>Holiday</a>"
 );
 
+
 /*
     February
 */

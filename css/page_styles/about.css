@@ -1,0 +1,90 @@
+/*
+    About CSS for the about page.
+*/
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    height: 400px;
+    line-height: 400px;
+}
+
+main div#aboutBackground {
+    background-image: url('../../photos/hairstyling3.jpg');
+    width: 100%;
+    height: 400px;
+    background-position: -50px -150px;
+}
+
+article#location div section img {
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+article#location div section p {
+    text-align: center;
+}
+
+article#location div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+article#location>div>img {
+    width: 30%;
+    display: block;
+    margin: auto;
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+
+article#location div section:first-of-type {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+article#location div section:last-of-type {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3em;
+        height: 300px;
+        line-height: 300px;
+    }
+
+    main div#aboutBackground {
+        background-position: -800px -100px;
+        height: 300px;
+    }
+}
+
+article {
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+}
+
+article>h2 {
+    text-align: left;
+    color: orange;
+    font-size: 2.5em;
+    border-bottom: 1px solid orange;
+    width: 100%;
+    cursor: pointer;
+}
+
+article>p {
+    float: right;
+    color: orange;
+    font-size: 2em;
+    margin: 0;
+    text-emphasis: bold;
+    cursor: pointer;
+}
