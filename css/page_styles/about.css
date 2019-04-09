@@ -71,6 +71,17 @@ article {
     margin: auto;
 }
 
+article div {
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    overflow: hidden;
+}
+
+article div.open{
+    max-height: 10000px;
+    transition: max-height 1s ease-in-out;
+}
+
 article>h2 {
     text-align: left;
     color: orange;
@@ -78,6 +89,7 @@ article>h2 {
     border-bottom: 1px solid orange;
     width: 100%;
     cursor: pointer;
+    user-select: none;
 }
 
 article>p {
@@ -87,4 +99,5 @@ article>p {
     margin: 0;
     text-emphasis: bold;
     cursor: pointer;
+    user-select: none;
 }
