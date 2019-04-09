@@ -2,6 +2,8 @@ window.addEventListener("load", aboutLoad);
 
 var locActive = false;
 var curActive = false;
+var certActive = false;
+
 function aboutLoad() {
     var location = document.getElementById("location");
     // location.getElementsByTagName("div")[0].style.display = "none";
@@ -9,6 +11,9 @@ function aboutLoad() {
     var cur = document.getElementById("cur");
     // location.getElementsByTagName("div")[0].style.display = "none";
     cur.getElementsByTagName("h2")[0].onclick = curClick;
+    var cert = document.getElementById("cert");
+    // location.getElementsByTagName("div")[0].style.display = "none";
+    cert.getElementsByTagName("h2")[0].onclick = certClick;
 }
 
 function locClick() {
@@ -40,5 +45,21 @@ function curClick() {
         cur.getElementsByTagName("p")[0].innerHTML = "&#x22c0;";
         cur.getElementsByTagName("div")[0].className = "open";
         curActive = true;
+    }
+}
+
+function certClick() {
+    if (certActive) {
+        var cert = document.getElementById("cert");
+        // location.getElementsByTagName("div")[0].style.display = "none";
+        cert.getElementsByTagName("div")[0].className = "";
+        cert.getElementsByTagName("p")[0].innerHTML = "&#x22c1;";
+        certActive = false;
+    } else {
+        var cert = document.getElementById("cert");
+        // location.getElementsByTagName("div")[0].style.display = "block";
+        cert.getElementsByTagName("p")[0].innerHTML = "&#x22c0;";
+        cert.getElementsByTagName("div")[0].className = "open";
+        certActive = true;
     }
 }

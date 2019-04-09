@@ -77,7 +77,7 @@ article div {
     overflow: hidden;
 }
 
-article div.open{
+article div.open {
     max-height: 10000px;
     transition: max-height 1s ease-in-out;
 }
@@ -100,4 +100,154 @@ article>p {
     text-emphasis: bold;
     cursor: pointer;
     user-select: none;
+}
+
+/*
+
+    Styles for the curriculum
+
+*/
+
+article#cur section {
+    border: 1px solid black;
+}
+
+article#cur aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+article#cur section#sem1g1 {
+    flex: 1 1 24%;
+    order: 3;
+}
+
+article#cur section#sem1g2 {
+    flex: 1 1 24%;
+    order: 4;
+}
+
+article#cur section#sem2g1 {
+    flex: 1 1 24%;
+    order: 5;
+}
+
+article#cur section#sem2g2 {
+    flex: 1 1 24%;
+    order: 6;
+}
+
+article#cur section.sem {
+    flex: 1 1 49%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+article#cur a {
+    color: orange;
+}
+
+article#cur a:hover {
+    color: rgb(173, 113, 2);
+}
+
+article#cur section h4 {
+    font-weight: normal;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+article#cur section h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+article#cur section p {
+    margin-left: 5px;
+}
+
+article#cur section p.std {
+    font-size: 0.8em;
+    margin-top: -5px;
+}
+
+section#sem2 {
+    order: 2;
+}
+
+@media only screen and (max-width: 940px) and (min-width: 521px) {
+    article#cur section#sem1g1 {
+        flex: 1 1 49%;
+        order: 2;
+    }
+
+    article#cur section#sem1g2 {
+        flex: 1 1 49%;
+        order: 3;
+    }
+
+    article#cur section#sem2g1 {
+        flex: 1 1 49%;
+        order: 5;
+    }
+
+    article#cur section#sem2g2 {
+        flex: 1 1 49%;
+        order: 6;
+    }
+
+    article#cur section.sem {
+        flex: 1 1 100%;
+    }
+
+    article#cur section#sem2 {
+        order: 4;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    article#cur section#sem1g1 {
+        flex: 1 1 99%;
+        order: 2;
+    }
+
+    article#cur section#sem1g2 {
+        flex: 1 1 99%;
+        order: 3;
+    }
+
+    article#cur section#sem2g1 {
+        flex: 1 1 99%;
+        order: 5;
+    }
+
+    article#cur section#sem2g2 {
+        flex: 1 1 99%;
+        order: 6;
+    }
+
+    article#cur section.sem {
+        flex: 1 1 100%;
+    }
+
+    article#cur section#sem2 {
+        order: 4;
+    }
+}
+
+/*
+
+    Certification CSS
+
+*/
+
+article#cert iframe {
+    width: 100%;
+    margin: auto;
 }
