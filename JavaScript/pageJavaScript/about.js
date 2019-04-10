@@ -3,6 +3,7 @@ window.addEventListener("load", aboutLoad);
 var locActive = false;
 var curActive = false;
 var certActive = false;
+var otherActive = true;
 
 function aboutLoad() {
     var location = document.getElementById("location");
@@ -14,6 +15,10 @@ function aboutLoad() {
     var cert = document.getElementById("cert");
     // location.getElementsByTagName("div")[0].style.display = "none";
     cert.getElementsByTagName("h2")[0].onclick = certClick;
+    var other = document.getElementById("other");
+    other.getElementsByTagName("h2")[0].onclick = otherClick;
+    other.getElementsByTagName("div")[0].className = "open";
+    other.getElementsByTagName("p")[0].innerHTML = "&#x22c0;";
 }
 
 function locClick() {
@@ -61,5 +66,21 @@ function certClick() {
         cert.getElementsByTagName("p")[0].innerHTML = "&#x22c0;";
         cert.getElementsByTagName("div")[0].className = "open";
         certActive = true;
+    }
+}
+
+function otherClick() {
+    if (otherActive) {
+        var other = document.getElementById("other");
+        // location.getElementsByTagName("div")[0].style.display = "none";
+        other.getElementsByTagName("div")[0].className = "";
+        other.getElementsByTagName("p")[0].innerHTML = "&#x22c1;";
+        otherActive = false;
+    } else {
+        var other = document.getElementById("other");
+        // location.getElementsByTagName("div")[0].style.display = "block";
+        other.getElementsByTagName("p")[0].innerHTML = "&#x22c0;";
+        other.getElementsByTagName("div")[0].className = "open";
+        otherActive = true;
     }
 }

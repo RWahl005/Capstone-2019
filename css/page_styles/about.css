@@ -251,3 +251,50 @@ article#cert iframe {
     width: 100%;
     margin: auto;
 }
+
+/*
+
+    Other Info CSS
+
+*/
+
+article#other ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: space-evenly;
+    justify-content: center
+}
+
+article#other li {
+    flex: 2 2 49%;
+    list-style-type: none;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+article#other a {
+    padding: 15px;
+    border: 1px solid orange;
+    color: orange;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: background-color 1s, color 0.1s;
+}
+
+article#other a div {
+    width: 0;
+    background-color: orange;
+}
+
+article#other a:hover {
+    background-color: orange;
+    color: white;
+}
+
+@media only screen and (max-width: 700px) {
+    article#other li {
+        flex: 2 2 100%;
+    }
+}
