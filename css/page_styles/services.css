@@ -1,0 +1,182 @@
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    height: 400px;
+    line-height: 400px;
+}
+
+main div#servicesBackground {
+    background-image: url('../../images/hairstyling4.jpg');
+    width: 100%;
+    height: 400px;
+    background-position: -50px -350px;
+}
+
+@media only screen and (max-width: 600px) {
+    main div#servicesBackground {
+        background-position: -400px -350px;
+    }
+}
+
+
+/* 
+    CSS Styles for the drop down.
+*/
+
+article {
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+}
+
+article div {
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    overflow: hidden;
+}
+
+article div.open {
+    max-height: 10000px;
+    transition: max-height 1s ease-in-out;
+}
+
+article>h2 {
+    text-align: left;
+    color: orange;
+    font-size: 2.5em;
+    border-bottom: 1px solid orange;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+article>p {
+    float: right;
+    color: orange;
+    font-size: 2em;
+    margin: 0;
+    text-emphasis: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+article#serv div {
+    display: flex;
+    border-collapse: collapse;
+    background-image: linear-gradient(rgba(255, 166, 0, 0.901), rgba(255, 166, 0, 0.901)), url('../../images/hairstyling2.jpg');
+    background-size: 100%;
+
+
+}
+
+article#serv div>section,
+article#serv div>section>section {
+    /* border: 1px solid orange; */
+}
+
+article#serv div>section>section:first-of-type {
+    border-bottom: 0;
+}
+
+article#serv div>section>section {
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+article#serv section#serv1 {
+    flex: 1 1 39%;
+}
+
+article#serv section#serv2 {
+    flex: 1 1 9%;
+}
+
+article#serv section#serv3 {
+    flex: 1 1 39%;
+}
+
+article#serv section#serv4 {
+    flex: 1 1 9%;
+}
+
+article#serv section section p {
+    color: white;
+    font-size: 1.3em;
+}
+
+article#serv section section p:first-of-type {
+    float: left;
+    margin-left: 5px;
+}
+
+article#serv section section p:last-of-type {
+    float: left;
+    margin-left: 20px;
+}
+
+article#serv section section::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+article#serv section section section {
+    clear: left;
+    color: white;
+}
+
+article#serv section h2 {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+article#serv div {
+    margin-bottom: 10px;
+}
+
+main>nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: space-evenly;
+    justify-content: center;
+}
+
+main>nav li {
+    flex: 2 2 49%;
+    list-style-type: none;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+main>nav a {
+    padding: 15px;
+    border: 1px solid orange;
+    color: orange;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: background-color 1s, color 0.1s;
+}
+
+
+main>nav a:not(#hours):hover {
+    background-color: orange;
+    color: white;
+}
+
+main>img {
+    width: 30%;
+    margin: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 550px) {
+    main>nav li {
+        flex: 2 2 100%;
+    }
+}
