@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hair Styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/page_styles/contact.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img id="logo" src="images/logo.png" alt="">
+            <a id="navicon"><img src="images/arrows.png" alt=""></a>
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="ctso.html">CTSO</a></li>
+            </ul>
+        </nav>
+        <script src="JavaScript/navigation.js"></script>
+    </header>
+    <main>
+        <div id="servicesBackground">
+            <h1>Contact Us</h1>
+        </div>
+        <h2>Got questions? Fill out this form!</h2>
+        <section>
+            <form action="confirm.html" method="POST">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@example.com" required>
+
+                    <label for="phn">Phone Number</label>
+                    <input type="tel" name="phn" id="phn"
+                        pattern="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$"
+                        placeholder="(xxx) xxx-xxxx" required>
+                    <p>Note: An email or phone number can be provided.</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Comments</legend>
+                    <textarea name="info" id="info" cols="30" rows="10" required></textarea>
+                </fieldset>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p><a href="">Main West-MEC Site</a></p>
+        <address>13201 W. Grand Avenue</address>
+        <address>Surprise AZ 85374</address>
+    </footer>
+
+    <script src="JavaScript/pageJavaScript/contactJS/validate.js"></script>
+</body>
+
+</html>
