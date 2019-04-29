@@ -40,6 +40,13 @@ footer a:hover {
     color: rgb(100, 99, 99);
 }
 
+footer#bottom {
+    position: relative;
+    bottom: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;

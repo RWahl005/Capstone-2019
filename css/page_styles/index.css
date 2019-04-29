@@ -30,16 +30,16 @@ section.content p {
     text-indent: 1em;
 }
 
-article{
-    display: flex;
+article {
+    /* display: flex; */
     flex-flow: row wrap;
 }
 
-section.content{
+section.content {
     flex: 1 1 auto;
 }
 
-article aside{
+article aside {
     flex: 1 1 initial;
 }
 
@@ -67,3 +67,60 @@ article aside{
     }
 }
 
+section>nav {
+    /* Sets the display to table */
+    display: table;
+    /* It has a width of 75% and is centered. */
+    width: 75%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+section>nav p {
+    /* A padding of 10 around the link */
+    padding: 10px;
+    /* Removes the link underlines */
+    text-decoration: none;
+    /* Adds the background color */
+    background-color: white;
+    /* Centers the buttons */
+    width: 100px;
+    margin: auto;
+    /* Sets the text color to white */
+    height: 100px;
+    border-radius: 100px;
+    border: 1px solid orange;
+}
+
+section>nav a:hover {
+    /* Changes the background color to gray. */
+    /* background-color: rgb(95, 94, 94); */
+}
+
+section nav>ul {
+    /* Sets the display to table-row */
+    display: table-row;
+}
+
+section nav>ul>li {
+    /* Sets the display to table-cell */
+    display: table-cell;
+    text-align: center;
+}
+
+section nav p:hover {
+    background-color: orange;
+}
+
+section nav p:hover a {
+    color: white;
+}
+
+section nav a {
+    color: orange;
+    height: auto;
+}
+
+section nav img {
+    width: 60%;
+}

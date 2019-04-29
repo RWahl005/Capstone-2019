@@ -114,3 +114,11 @@ div#but button:hover {
         width: 40%;
     }
 }
+
+input {
+    width: 320px;
+}
+
+p#cont {
+    text-align: left;
+}
