@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- A page specifc css style -->
     <link rel="stylesheet" href="css/page_styles/about.css">
+    <link rel="stylesheet" href="css/subcss/popup.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 
 <body>
@@ -35,12 +37,34 @@
             <h1>About Hairstyling</h1>
         </div>
 
+        <!-- The information window. -->
+        <div id="window">
+            <div id="windowheader">
+                <p>Title</p>
+            </div>
+            <h1>Header</h1>
+            <div id="slider">
+                <a onclick="previousButton()" id="prev">&#10094;</a>
+                <a onclick="nextButton()" id="next">&#10095;</a>
+                <div id="imageHolder">
+                    <!-- Insert images here. (No classes or ids need to be added) -->
+                    <img src="images/hairstyling1.jpg" alt="" />
+                    <img src="images/hairstyling2.jpg" alt="" />
+                    <img src="images/hairstyling10.jpg" alt="">
+                </div>
+            </div>
+            <button onclick="closemenu()">X</button>
+            <p>Body</p>
+        </div>
+
         <article id="location">
             <p>&#x22C1;</p>
             <h2>Location</h2>
             <div>
                 <img src="images/northwest.png" alt="">
                 <section>
+                    <p>At the <a onclick="openmenu('Example', 'y', '')">West-Mec North
+                            West Campus</a></p>
                     <p>13201 W. Grand Avenue Surprise AZ 85374</p>
                 </section>
                 <section>
@@ -234,6 +258,8 @@
         <address>Surprise AZ 85374</address>
     </footer>
 
+    <script src="JavaScript/Slider.js"></script>
+    <script src="JavaScript/popup.js"></script>
     <script src="JavaScript/pageJavaScript/about.js"></script>
 </body>
 

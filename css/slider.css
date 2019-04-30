@@ -12,10 +12,15 @@ div#slider a#next,
 div#slider a#prev {
     position: absolute;
     z-index: 5;
-    color: white;
+    color: rgba(155, 155, 155, 0.76);
     cursor: pointer;
     user-select: none;
     font-size: 1.5em;
+}
+
+div#slider a#next:hover,
+div#slider a#prev:hover {
+    color: rgba(255, 255, 255, 0.74);
 }
 
 div#slider a#prev {

@@ -4,6 +4,8 @@
 
 */
 
+@import url('https://fontlibrary.org/face/symbola');
+
 main section#sliderSection {
     background-color: rgb(207, 207, 207);
     width: 100%;
@@ -39,11 +41,6 @@ section.content {
     flex: 1 1 auto;
 }
 
-article aside {
-    flex: 1 1 initial;
-}
-
-
 @media only screen and (max-width: 600px) {
     #slider {
         width: 100%;
@@ -74,6 +71,7 @@ section>nav {
     width: 75%;
     margin: auto;
     margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 section>nav p {
@@ -116,11 +114,40 @@ section nav p:hover a {
     color: white;
 }
 
+section nav p {
+    cursor: pointer;
+}
+
 section nav a {
     color: orange;
     height: auto;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 100%;
+    user-select: none;
 }
 
 section nav img {
     width: 60%;
+}
+
+section nav a aside {
+    font-size: 0.5em;
+}
+
+section nav p::first-letter {
+    font-family: 'SymbolaRegular';
+    font-size: 5em;
+}
+
+section nav p:not(::first-letter) {
+    font-size: 1em;
+}
+
+article>p {
+    text-align: center;
+}
+
+article>h3 {
+    text-align: center;
 }

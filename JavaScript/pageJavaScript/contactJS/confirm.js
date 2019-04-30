@@ -11,3 +11,22 @@ function homePage() {
     }
     location.href = finalUrl;
 }
+
+var currentSession;
+
+var session = {
+    valid: 0,
+    expired: 1
+
+};
+
+// Alerts the user their session has expired after 5 minutes. The user is then taken to the homepage.
+window.addEventListener("load", function () {
+    currentSession = session.valid
+    setTimeout(function () {
+        // Has little purpose besides fill the object requirement.
+        currentSession = session.expired;
+        alert('Your session has expired!');
+        homePage();
+    }, 300000);
+});
