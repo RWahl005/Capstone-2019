@@ -6,8 +6,10 @@ window.addEventListener("load", function () {
     document.getElementById("lname").oninput = lnameVal;
     document.getElementById("email").addEventListener("input", emailVal);
     document.getElementById("email").addEventListener("input", checkAttrib);
+    document.getElementById("email").addEventListener("blur", checkAttrib);
     document.getElementById("phn").addEventListener("input", telVal);
     document.getElementById("phn").addEventListener("input", checkAttrib);
+    document.getElementById("phn").addEventListener("blur", checkAttrib);
     document.getElementById("info").addEventListener("input", txtVal);
     checkAttrib();
 });
@@ -49,7 +51,7 @@ function telVal() {
 
     if (elm.validity.valueMissing && email.validity.valueMissing) {
         elm.setCustomValidity("Please enter in your email or phone number!");
-    } else if (!/^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/.test(elm.value)) {
+    } else if (!elm.validity.valueMissing && !/^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/.test(elm.value)) {
         elm.setCustomValidity("Incorrect phone number. Example: (623) 877-6927")
     } else {
         elm.setCustomValidity("");
@@ -59,14 +61,19 @@ function telVal() {
 function checkAttrib() {
     var tel = document.getElementById("phn");
     var email = document.getElementById("email");
-    if (tel.validity.valueMissing && !email.validity.valueMissing) {
-        email.setAttribute("required", "");
-        if (tel.hasAttribute("required"))
-            tel.removeAttribute("required");
-    } else if (!tel.validity.valueMissing && email.validity.valueMissing) {
+    if ((tel.validity.valueMissing && email.validity.valueMissing) || (tel.value === "" && email.value === "")) {
         tel.setAttribute("required", "");
-        if (email.hasAttribute("required"))
+        email.setAttribute("required", "");
+    } else if ((tel.validity.valueMissing || tel.value === "") && !email.validity.valueMissing) {
+        email.setAttribute("required", "");
+        if (tel.hasAttribute("required")) {
+            tel.removeAttribute("required");
+        }
+    } else if (!tel.validity.valueMissing && (email.validity.valueMissing || email.value === "")) {
+        tel.setAttribute("required", "");
+        if (email.hasAttribute("required")) {
             email.removeAttribute("required");
+        }
     }
 }
 
