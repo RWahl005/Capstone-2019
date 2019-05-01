@@ -1,7 +1,19 @@
+"use strict";
+
+/*
+    This script is used for the confirm.html page.
+*/
+
+/**
+ * Takes the user back.
+ */
 function backToPage() {
     window.history.back();
 }
 
+/**
+ * Takes the user to the homepage by calculating the url based upon the current url and the index file name.
+ */
 function homePage() {
     var url = location.href.split("/");
     url[url.length - 1] = "index.html";

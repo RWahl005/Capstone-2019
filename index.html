@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hair Styling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The Generic CSS Styles -->
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/page_styles/index.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Page Specifc CSS Style Pages -->
+    <link rel="stylesheet" href="css/page_styles/index.css">
 </head>
 
 <body>
     <header>
-
         <nav>
             <img id="logo" src="images/logo.png" alt="">
             <a id="navicon"><img src="images/arrows.png" alt=""></a>
@@ -29,7 +30,9 @@
         </nav>
         <script src="JavaScript/navigation.js"></script>
     </header>
+    <!-- The main content -->
     <main>
+        <!-- The image sliders. -->
         <section id="sliderSection">
             <div></div>
             <div id="slider">
@@ -44,6 +47,7 @@
             </div>
             <div></div>
         </section>
+        <!-- The selection lists -->
         <article>
             <section>
                 <nav>
@@ -51,6 +55,7 @@
                         <li>
                             <p id="aboutBut"><a href="about.html">i<br>About</a></p>
                         </li>
+                        <!-- UTF-8 symbols are used for the buttons. (For some reason FireFox does not like font-size with utf-8 characters) -->
                         <li>
                             <p id="servicesBut"><a href="services.html"> &#x1f4d6;<br>Services</a></p>
                         </li>
@@ -60,6 +65,7 @@
                     </ul>
                 </nav>
             </section>
+            <!-- The main page content of the index -->
             <h3>Hairstyling</h3>
             <p>Hairstyling is a two-year interactive program that teaches students the latest techniques in hairstyling.
                 Students will learn from a cosmetology professional in a salon setting.</p>
@@ -73,11 +79,11 @@
         <address>Surprise AZ 85374</address>
     </footer>
 
+    <!-- The JavaScripts -->
     <script src="JavaScript/pageJavaScript/index.js"></script>
     <script src="JavaScript/Slider.js"></script>
+    <!-- The Settings for the slider -->
     <script>
-        // Your settings go in here!
-        // Example:
         setSetting("Auto", true); // The images switch on their own.
         setSetting("AutoTime", 5); // Set how often the images swtich. (Time in seconds.)
     </script>

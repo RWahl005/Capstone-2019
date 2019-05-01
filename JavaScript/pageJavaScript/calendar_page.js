@@ -1,5 +1,7 @@
+"use strict";
 /*
     This JavaScript file has all of the events for the calendar.
+    It is used by the calendar.html page
 */
 
 
