@@ -30,14 +30,16 @@
                 <li><a href="ctso.html">CTSO</a></li>
             </ul>
         </nav>
+        <!-- JavaScript to handle the nav bar. -->
         <script src="JavaScript/navigation.js"></script>
     </header>
     <main>
+        <!-- The Image with the white text in it -->
         <div id="aboutBackground">
             <h1>About Hairstyling</h1>
         </div>
 
-        <!-- The information window. -->
+        <!-- The information window. (PopUp window with images of the NW Campus) -->
         <div id="window">
             <div id="windowheader">
                 <p>Title</p>
@@ -48,22 +50,35 @@
                 <a onclick="nextButton()" id="next">&#10095;</a>
                 <div id="imageHolder">
                     <!-- Insert images here. (No classes or ids need to be added) -->
-                    <img src="images/hairstyling1.jpg" alt="" />
-                    <img src="images/hairstyling2.jpg" alt="" />
-                    <img src="images/hairstyling10.jpg" alt="">
+                    <script>
+                        // Addeds in all of the images because I don't want to manully type 25 images in.
+                        for (var i = 1; i < 26; i++) {
+                            document.getElementById("imageHolder").innerHTML += '<img src="images/nwc/nwc' + i +
+                                '.jpg" alt="" />';
+                        }
+                    </script>
                 </div>
             </div>
+            <!-- Button to close the popup -->
             <button onclick="closemenu()">X</button>
             <p>Body</p>
+            <!-- The pop up script (It is put here to prevent it from showing up for a split second (Google's API lags the page loading)) -->
+            <script src="JavaScript/popup.js"></script>
         </div>
 
+        <!-- Spoiler menus are denoted by an article -->
+        <!-- The p is the arrow and the h2 is the name of the spolier -->
+        <!-- All of the spoiler content is put with in the div of the article. -->
         <article id="location">
             <p>&#x22C1;</p>
             <h2>Location</h2>
             <div>
                 <img src="images/northwest.png" alt="">
                 <section>
-                    <p>At the <a onclick="openmenu('Example', 'y', '')">West-Mec North
+                    <!-- Contains a link that opens the popup menu -->
+                    <p>At the <a
+                            onclick="openmenu('West-Mec North West Campus', '13201 W. Grand Avenue, Surprise, AZ 85374', 'Pictures of the Campus')">West-Mec
+                            North
                             West Campus</a></p>
                     <p>13201 W. Grand Avenue Surprise AZ 85374</p>
                 </section>
@@ -72,11 +87,21 @@
                 </section>
             </div>
         </article>
+
+        <!-- The curriculum spoiler menu (See note above for info about spoilers) -->
         <article id="cur">
             <p>&#x22C1;</p>
             <h2>Curriculum</h2>
             <div>
+                <!-- The aside acts as the grid container (In reality it's a flex box) -->
                 <aside>
+                    <!-- ====[Flex Box Info]==== -->
+                    <!-- Each section is a flex box cell -->
+                    <!-- The the sections are aranged as they would be on mobile. (The order is changed in css) -->
+                    <!-- They have an id relating to their content. -->
+                    <!-- EX: sem1g1 means semester 1 grid 1 -->
+                    <!-- Major things in the grid are put in h3, Unit titles in h4s, and content in paragraph tags. -->
+                    <!-- Note: Standards p tags have a class name std for custom formatting. -->
                     <section id="sem" class="sem">Semester 1</section>
                     <section id="sem1g1">
                         <h3>District Pre-Assessment</h3>
@@ -113,6 +138,7 @@
                             <p class="std">Standards 2.6, 4.1, 16.1-16.2</p>
                         </p>
                     </section>
+                    <!-- Semester 1 Grid 2 -->
                     <section id="sem1g2">
                         <h4>Unit 4 (4 Weeks)</h4>
                         <p>
@@ -153,6 +179,7 @@
                         <h3>Semester Exam</h3>
                     </section>
                     <section id="sem2" class="sem">Semester 2</section>
+                    <!-- Semester 2 Grid 1 -->
                     <section id="sem2g1">
                         <h3>SkillsUSA Regional Conference</h3>
                         <h4>Unit 7 (1 Weeks)</h4>
@@ -190,6 +217,7 @@
                             <p class="std">Standards 3.1-3.3, 8.1-8.9, 15.1-15.8, 16.1-16.3</p>
                         </p>
                     </section>
+                    <!-- Semester 2 grid 2 -->
                     <section id="sem2g2">
                         <h4>Unit 10 (4 Weeks)</h4>
                         <p>
@@ -219,25 +247,32 @@
                         <h3>SkillsUSA National Conference</h3>
                     </section>
                 </aside>
+                <!-- End Curriculum Flex Box -->
+                <!-- Link to the offical pdf version. (Opens in a new tab) -->
                 <p><a target="_blank" href="https://drive.google.com/file/d/1d5e6Q1jxVjeCw8G0c7Z3Mk_rVJ8asYaQ/view">View
                         the pdf version
                         of the curriculum here!</a></p>
             </div>
         </article>
+        <!-- Certification Spoiler (For more information about spoilers see note above) -->
         <article id="cert">
             <p>&#x22C1;</p>
             <h2>Certification Sheet</h2>
             <div>
+                <!-- Shows the certification sheet pdf using google's api. (It lags a ton so it keeps the page loading for a bit) -->
                 <iframe src="https://drive.google.com/file/d/1iTIOm7nN5lbskiTBe10gceDB4bLTmO6d/preview" width="640"
                     height="480"></iframe>
             </div>
         </article>
+        <!-- The other spoiler (Open by default) (Takes a second to auto open due to the google api used above) -->
         <article id="other">
             <p>&#x22C1;</p>
             <h2>Other Information</h2>
             <div>
+                <!-- Links for all of the additional pages. (Links that link to the main west-mec site open in new tabs) -->
                 <nav>
                     <ul>
+                        <!-- Links to the calendar page. (Pretty cool page) -->
                         <li><a href="information/calendar.html">Calendar</a>
                             <div></div>
                         </li>
@@ -252,14 +287,15 @@
             </div>
         </article>
     </main>
+    <!-- The footer -->
     <footer>
-        <p><a href="">Main West-MEC Site</a></p>
+        <p><a href="https://west-mec.edu/">Main West-MEC Site</a></p>
         <address>13201 W. Grand Avenue</address>
         <address>Surprise AZ 85374</address>
     </footer>
 
+    <!-- JavaScript scripts (Takes a second to load due to the google api used.) -->
     <script src="JavaScript/Slider.js"></script>
-    <script src="JavaScript/popup.js"></script>
     <script src="JavaScript/pageJavaScript/about.js"></script>
 </body>
 

@@ -14,6 +14,11 @@ table p {
     width: 100%;
 }
 
+table th {
+    background-color: orange;
+    color: white;
+}
+
 .calendarEvents {
     width: 100%;
     display: block;

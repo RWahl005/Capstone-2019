@@ -2,7 +2,7 @@
     About CSS for the about page.
 */
 
-h1 {
+main div#aboutBackground h1 {
     text-align: center;
     color: white;
     font-size: 5em;
@@ -52,8 +52,22 @@ article#location div section:last-of-type {
     grid-row: 2;
 }
 
+div#window h1 {
+    text-align: center;
+}
+
+main a {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main a:hover {
+    color: rgb(150, 101, 10);
+}
+
 @media only screen and (max-width: 600px) {
-    h1 {
+    div#aboutBackground h1 {
         font-size: 3em;
         height: 300px;
         line-height: 300px;

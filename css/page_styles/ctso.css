@@ -11,7 +11,7 @@ main div#ctsoBackground {
     background-image: url('../../images/hairstyling9.jpg');
     width: 100%;
     height: 400px;
-    background-position: 30px -150px;
+    background-position: -50px -150px;
 }
 
 @media only screen and (max-width: 600px) {
