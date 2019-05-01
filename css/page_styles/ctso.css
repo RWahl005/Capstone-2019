@@ -1,0 +1,80 @@
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    height: 400px;
+    line-height: 400px;
+}
+
+main div#ctsoBackground {
+    background-image: url('../../images/hairstyling9.jpg');
+    width: 100%;
+    height: 400px;
+    background-position: -50px -150px;
+}
+
+@media only screen and (max-width: 600px) {
+    main div#ctsoBackground {
+        background-position: -400px -350px;
+    }
+
+    article img {
+        width: 30%;
+        display: block;
+    }
+
+}
+
+main>img {
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    text-align: center;
+    clear: both;
+}
+
+article img {
+    width: 20%;
+    float: left;
+}
+
+article {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+article a {
+    color: orange;
+}
+
+article a:hover {
+    color: rgb(151, 100, 5);
+}
+
+@media only screen and (max-width: 600px) {
+
+    article img {
+        width: 50%;
+        float: none;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    main>img {
+        width: 50%;
+    }
+
+}

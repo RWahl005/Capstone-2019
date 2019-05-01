@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hair Styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Styles For this page -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- A page specifc css style -->
+    <link rel="stylesheet" href="css/page_styles/about.css">
+    <link rel="stylesheet" href="css/subcss/popup.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+
+<body>
+    <header>
+        <!-- Standared Nav -->
+        <nav>
+            <img id="logo" src="images/logo.png" alt="">
+            <a id="navicon"><img src="images/arrows.png" alt=""></a>
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ctso.html">CTSO</a></li>
+            </ul>
+        </nav>
+        <!-- JavaScript to handle the nav bar. -->
+        <script src="JavaScript/navigation.js"></script>
+    </header>
+    <main>
+        <!-- The Image with the white text in it -->
+        <div id="aboutBackground">
+            <h1>About Hairstyling</h1>
+        </div>
+
+        <!-- The information window. (PopUp window with images of the NW Campus) -->
+        <div id="window">
+            <div id="windowheader">
+                <p>Title</p>
+            </div>
+            <h1>Header</h1>
+            <div id="slider">
+                <a onclick="previousButton()" id="prev">&#10094;</a>
+                <a onclick="nextButton()" id="next">&#10095;</a>
+                <div id="imageHolder">
+                    <!-- Insert images here. (No classes or ids need to be added) -->
+                    <script>
+                        // Addeds in all of the images because I don't want to manully type 25 images in.
+                        for (var i = 1; i < 26; i++) {
+                            document.getElementById("imageHolder").innerHTML += '<img src="images/nwc/nwc' + i +
+                                '.jpg" alt="" />';
+                        }
+                    </script>
+                </div>
+            </div>
+            <!-- Button to close the popup -->
+            <button onclick="closemenu()">X</button>
+            <p>Body</p>
+            <!-- The pop up script (It is put here to prevent it from showing up for a split second (Google's API lags the page loading)) -->
+            <script src="JavaScript/popup.js"></script>
+        </div>
+
+        <!-- Spoiler menus are denoted by an article -->
+        <!-- The p is the arrow and the h2 is the name of the spolier -->
+        <!-- All of the spoiler content is put with in the div of the article. -->
+        <article id="location">
+            <p>&#x22C1;</p>
+            <h2>Location</h2>
+            <div>
+                <img src="images/northwest.png" alt="">
+                <section>
+                    <!-- Contains a link that opens the popup menu -->
+                    <p>At the <a
+                            onclick="openmenu('West-Mec North West Campus', '13201 W. Grand Avenue, Surprise, AZ 85374', 'Pictures of the Campus')">West-Mec
+                            North
+                            West Campus</a></p>
+                    <p>13201 W. Grand Avenue Surprise AZ 85374</p>
+                </section>
+                <section>
+                    <img src="images/ooglemaps.png" alt="">
+                </section>
+            </div>
+        </article>
+
+        <!-- The curriculum spoiler menu (See note above for info about spoilers) -->
+        <article id="cur">
+            <p>&#x22C1;</p>
+            <h2>Curriculum</h2>
+            <div>
+                <!-- The aside acts as the grid container (In reality it's a flex box) -->
+                <aside>
+                    <!-- ====[Flex Box Info]==== -->
+                    <!-- Each section is a flex box cell -->
+                    <!-- The the sections are aranged as they would be on mobile. (The order is changed in css) -->
+                    <!-- They have an id relating to their content. -->
+                    <!-- EX: sem1g1 means semester 1 grid 1 -->
+                    <!-- Major things in the grid are put in h3, Unit titles in h4s, and content in paragraph tags. -->
+                    <!-- Note: Standards p tags have a class name std for custom formatting. -->
+                    <section id="sem" class="sem">Semester 1</section>
+                    <section id="sem1g1">
+                        <h3>District Pre-Assessment</h3>
+                        <h4>Unit 1 (2 Weeks)</h4>
+                        <p>
+                            <b>Orientation, Infection Control & First Aid</b>
+                            <ul>
+                                <li>First Aid</li>
+                                <li>Infection Control</li>
+                                <li>Levels of Infection Control Sanitation, Disinfection, Sterilization</li>
+                            </ul>
+                            <p class="std">Standards 1.0-1.10, 2.0-2.11</p>
+                        </p>
+                        <h4>Unit 2 (3 Weeks)</h4>
+                        <p>
+                            <b>Properties of the hair & scalp</b>
+                            <ul>
+                                <li>Structures of hair</li>
+                                <li>Chemical Composition of the hair</li>
+                                <li>Disorders of the hair & scalp</li>
+                                <li>Hair & Scalp Analysis</li>
+                            </ul>
+                            <p class="std">Standards 12.1-12.5</p>
+                        </p>
+                        <h4>Unit 3 (4 Weeks)</h4>
+                        <p>
+                            <b>Scalp Care, Shampooing & Conditioner</b>
+                            <ul>
+                                <li>Scalp Massage</li>
+                                <li>Scalp Treatment</li>
+                                <li>Proper Shampoo Services</li>
+                                <li>Draping</li>
+                            </ul>
+                            <p class="std">Standards 2.6, 4.1, 16.1-16.2</p>
+                        </p>
+                    </section>
+                    <!-- Semester 1 Grid 2 -->
+                    <section id="sem1g2">
+                        <h4>Unit 4 (4 Weeks)</h4>
+                        <p>
+                            <b>Principles of Hair Design</b>
+                            <ul>
+                                <li>Elements of hair Design</li>
+                                <li>Hair type and texture</li>
+                                <li>Style and face shape harmony</li>
+                                <li>Structure Design for Men</li>
+                            </ul>
+                            <p class="std">Standards 4.5, 7.1-7.5, 16.2</p>
+                        </p>
+                        <h3>SkillsUSA Fall Conference</h3>
+                        <h4>Unit 5 (4 Weeks)</h4>
+                        <p>
+                            <b>Hair Styling</b>
+                            <ul>
+                                <li>Client Consultation</li>
+                                <li>Wet Hair Styling</li>
+                                <li>Finger waves / Pin curls</li>
+                                <li>Hair wrapping & Thermal Styling</li>
+                            </ul>
+                            <p class="std">Standards 5.1-5.6, 16.1-16.2</p>
+                        </p>
+                        <h4>Unit 6 (4 Weeks)</h4>
+                        <p>
+                            <b>Hair Cutting</b>
+                            <ul>
+                                <li>Basic Principles</li>
+                                <li>Client Consultations</li>
+                                <li>Proper use of hair-cutting tools</li>
+                                <li>Maintain Safety</li>
+                                <li>Haircutting Techniques</li>
+                                <li>Sectioning & Types of haircutting</li>
+                            </ul>
+                            <p class="std">Standards 5.1-5.6, 6.1, 16.1-16.2</p>
+                        </p>
+                        <h3>Semester Exam</h3>
+                    </section>
+                    <section id="sem2" class="sem">Semester 2</section>
+                    <!-- Semester 2 Grid 1 -->
+                    <section id="sem2g1">
+                        <h3>SkillsUSA Regional Conference</h3>
+                        <h4>Unit 7 (1 Weeks)</h4>
+                        <p>
+                            <b>Basic Chemistry</b>
+                            <ul>
+                                <li>Science of Chemistry</li>
+                                <li>Define matter</li>
+                                <li>Understanding pH</li>
+                            </ul>
+                            <p class="std">Standards 3.1-3.3, 6.1-6.7, 15.0-15.8, 16.1-16.3</p>
+                        </p>
+                        <h4>Unit 8 (5 Weeks)</h4>
+                        <p>
+                            <b>Chemical Texture</b>
+                            <ul>
+                                <li>Perm</li>
+                                <li>Chemical relaxer</li>
+                                <li>Curl reformation</li>
+                            </ul>
+                            <p class="std">Standards 3.1-3.3, 6.1-6.7, 15.0-15.8, 16.1-16.3</p>
+                        </p>
+                        <h4>Unit 9 (5 Weeks)</h4>
+                        <p>
+                            <b>Hair Coloring</b>
+                            <ul>
+                                <li>Understanding the why</li>
+                                <li>Review hair facts</li>
+                                <li>Natural hair color</li>
+                                <li>Color consultation</li>
+                                <li>Color formulation</li>
+                                <li>Toners</li>
+                                <li>Lighteners</li>
+                            </ul>
+                            <p class="std">Standards 3.1-3.3, 8.1-8.9, 15.1-15.8, 16.1-16.3</p>
+                        </p>
+                    </section>
+                    <!-- Semester 2 grid 2 -->
+                    <section id="sem2g2">
+                        <h4>Unit 10 (4 Weeks)</h4>
+                        <p>
+                            <b>First Semester Review</b>
+                            <ul>
+                                <li>Hair & Scalp</li>
+                                <li>Shampooing</li>
+                                <li>Hair Design & Styling</li>
+                                <li>Haircutting</li>
+                                <li>Chemical Texture and Hair Coloring</li>
+                            </ul>
+                            <p class="std">All standards from the first semester.</p>
+                        </p>
+                        <h3>SkillsUSA State Conference</h3>
+                        <h4>Unit 11 (4 Weeks)</h4>
+                        <p>
+                            <b>State Board Prep</b>
+                            <ul>
+                                <li>State Board</li>
+                                <li>Preparation and Practice</li>
+                                <li>Practical and Written Testing</li>
+                            </ul>
+                            <p class="std">All Standards.</p>
+                        </p>
+                        <h3>Arizona Board of Cosmetology License Certification Exam in Hairstyling</h3>
+                        <h3>District Post-Assessment</h3>
+                        <h3>SkillsUSA National Conference</h3>
+                    </section>
+                </aside>
+                <!-- End Curriculum Flex Box -->
+                <!-- Link to the offical pdf version. (Opens in a new tab) -->
+                <p><a target="_blank" href="https://drive.google.com/file/d/1d5e6Q1jxVjeCw8G0c7Z3Mk_rVJ8asYaQ/view">View
+                        the pdf version
+                        of the curriculum here!</a></p>
+            </div>
+        </article>
+        <!-- Certification Spoiler (For more information about spoilers see note above) -->
+        <article id="cert">
+            <p>&#x22C1;</p>
+            <h2>Certification Sheet</h2>
+            <div>
+                <!-- Shows the certification sheet pdf using google's api. (It lags a ton so it keeps the page loading for a bit) -->
+                <iframe src="https://drive.google.com/file/d/1iTIOm7nN5lbskiTBe10gceDB4bLTmO6d/preview" width="640"
+                    height="480"></iframe>
+            </div>
+        </article>
+        <!-- The other spoiler (Open by default) (Takes a second to auto open due to the google api used above) -->
+        <article id="other">
+            <p>&#x22C1;</p>
+            <h2>Other Information</h2>
+            <div>
+                <!-- Links for all of the additional pages. (Links that link to the main west-mec site open in new tabs) -->
+                <nav>
+                    <ul>
+                        <!-- Links to the calendar page. (Pretty cool page) -->
+                        <li><a href="information/calendar.html">Calendar</a>
+                            <div></div>
+                        </li>
+                        <li><a target="_blank" href="https://www.instagram.com/westmecnwchairstyling/">Social Media</a>
+                        </li>
+                        <li><a target="_blank" href="https://west-mec.edu/advisory-council/">Advisory Council
+                                Information</a></li>
+                        <li><a target="_blank" href="https://west-mec.edu/parent-resources/">Grant/Scholarship
+                                Information</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+    </main>
+    <!-- The footer -->
+    <footer>
+        <p><a href="https://west-mec.edu/">Main West-MEC Site</a></p>
+        <address>13201 W. Grand Avenue</address>
+        <address>Surprise AZ 85374</address>
+    </footer>
+
+    <!-- JavaScript scripts (Takes a second to load due to the google api used.) -->
+    <script src="JavaScript/Slider.js"></script>
+    <script src="JavaScript/pageJavaScript/about.js"></script>
+</body>
+
+</html>

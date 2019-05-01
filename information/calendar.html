@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hair Styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Generic CSS Styles -->
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/subcss/calendar.css">
+    <link rel="stylesheet" href="../css/subcss/popup.css">
+    <!-- Page Specifc CSS Styles -->
+    <link rel="stylesheet" href="../css/page_styles/calendarPage.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="../images/logo.png" alt="">
+            <a id="navicon"><img src="../images/arrows.png" alt=""></a>
+            <ul id="navigation">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html" class="active">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../apply.html">Apply</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../ctso.html">CTSO</a></li>
+            </ul>
+        </nav>
+        <script src="../JavaScript/navigation.js"></script>
+    </header>
+    <main>
+        <h1>West-MEC Hairstyling Calendar</h1>
+        <!-- The popup menu div -->
+        <div id="window">
+            <div id="windowheader">
+                <p>Title</p>
+            </div>
+            <h1>Header</h1>
+            <button onclick="closemenu()">X</button>
+            <p>Body</p>
+        </div>
+        <!-- The calendar div is where the calendar is put -->
+        <div id="calendar"></div>
+        <p>This is the calendar for the 2019 - 2020 school year. Here is the <a
+                href="https://drive.google.com/file/d/19VpO0g714jxIwRAwatJRF8vXiltvcH80/view" target="_blank">pdf
+                version</a> of the
+            calendar.
+        </p>
+
+        <!-- JavaScript Page Scripts -->
+        <script src="../JavaScript/calendar.js"></script>
+        <script src="../JavaScript/popup.js"></script>
+        <script src="../JavaScript/pageJavaScript/calendar_page.js"></script>
+        <!-- Reloads the calendar when the page is loaded -->
+        <script>
+            reloadCalendar();
+        </script>
+    </main>
+    <!-- The footer of the page. -->
+    <footer>
+        <p><a href="https://west-mec.edu/">Main West-MEC Site</a></p>
+        <address>13201 W. Grand Avenue</address>
+        <address>Surprise AZ 85374</address>
+    </footer>
+</body>
+
+</html>

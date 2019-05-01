@@ -1,0 +1,76 @@
+.calendarFirstDay {
+    width: 100%;
+    padding: 5px;
+    background-color: greenyellow;
+    display: block;
+    text-align: center;
+    max-width: none;
+    cursor: pointer;
+
+    /* position: static; */
+}
+
+table p {
+    width: 100%;
+}
+
+table th {
+    background-color: orange;
+    color: white;
+}
+
+.calendarEvents {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    max-width: none;
+}
+
+.calendarHoliday {
+    width: 100%;
+    padding: 5px;
+    background-color: orange;
+    display: block;
+    text-align: center;
+    max-width: none;
+    cursor: pointer;
+}
+
+.calendarTeachProf {
+    width: 100%;
+    padding: 5px;
+    background-color: rgb(50, 132, 255);
+    display: block;
+    text-align: center;
+    max-width: none;
+    cursor: pointer;
+    color: white;
+}
+
+.calendarLastDay {
+    width: 100%;
+    padding: 5px;
+    background-color: red;
+    display: block;
+    text-align: center;
+    max-width: none;
+    cursor: pointer;
+}
+
+main>p {
+    text-align: center;
+}
+
+main>p>a {
+    color: orange;
+}
+
+main>p>a:hover {
+    color: rgb(218, 143, 4);
+}
+
+h1 {
+    text-align: center;
+}

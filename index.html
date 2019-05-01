@@ -4,12 +4,89 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Hair Styling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The Generic CSS Styles -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Page Specifc CSS Style Pages -->
+    <link rel="stylesheet" href="css/page_styles/index.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <img id="logo" src="images/logo.png" alt="">
+            <a id="navicon"><img src="images/arrows.png" alt=""></a>
+            <ul id="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ctso.html">CTSO</a></li>
+            </ul>
+        </nav>
+        <script src="JavaScript/navigation.js"></script>
+    </header>
+    <!-- The main content -->
+    <main>
+        <!-- The image sliders. -->
+        <section id="sliderSection">
+            <div></div>
+            <div id="slider">
+                <a onclick="previousButton()" id="prev">&#10094;</a>
+                <a onclick="nextButton()" id="next">&#10095;</a>
+                <div id="imageHolder">
+                    <!-- Insert images here. (No classes or ids need to be added) -->
+                    <img src="images/hairstyling1.jpg" alt="" />
+                    <img src="images/hairstyling2.jpg" alt="" />
+                    <img src="images/hairstyling10.jpg" alt="">
+                </div>
+            </div>
+            <div></div>
+        </section>
+        <!-- The selection lists -->
+        <article>
+            <section>
+                <nav>
+                    <ul>
+                        <li>
+                            <p id="aboutBut"><a href="about.html">i<br>About</a></p>
+                        </li>
+                        <!-- UTF-8 symbols are used for the buttons. (For some reason FireFox does not like font-size with utf-8 characters) -->
+                        <li>
+                            <p id="servicesBut"><a href="services.html"> &#x1f4d6;<br>Services</a></p>
+                        </li>
+                        <li>
+                            <p id="applyBut"><a href="apply.html"> &#x270E;<br>Apply</a></p>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- The main page content of the index -->
+            <h3>Hairstyling</h3>
+            <p>Hairstyling is a two-year interactive program that teaches students the latest techniques in hairstyling.
+                Students will learn from a cosmetology professional in a salon setting.</p>
+            <p>After completion of the program, students may test to receive hairstyling license from the Arizona Board
+                of Cosmetology.</p>
+        </article>
+    </main>
+    <footer>
+        <p><a href="https://west-mec.edu/">Main West-MEC Site</a></p>
+        <address>13201 W. Grand Avenue</address>
+        <address>Surprise AZ 85374</address>
+    </footer>
 
+    <!-- The JavaScripts -->
+    <script src="JavaScript/pageJavaScript/index.js"></script>
+    <script src="JavaScript/Slider.js"></script>
+    <!-- The Settings for the slider -->
+    <script>
+        setSetting("Auto", true); // The images switch on their own.
+        setSetting("AutoTime", 5); // Set how often the images swtich. (Time in seconds.)
+    </script>
 </body>
 
 </html>

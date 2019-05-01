@@ -1,0 +1,314 @@
+/*
+    About CSS for the about page.
+*/
+
+main div#aboutBackground h1 {
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    height: 400px;
+    line-height: 400px;
+}
+
+main div#aboutBackground {
+    background-image: url('../../images/hairstyling3.jpg');
+    width: 100%;
+    height: 400px;
+    background-position: -50px -150px;
+}
+
+article#location div section img {
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+article#location div section p {
+    text-align: center;
+}
+
+article#location div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+article#location>div>img {
+    width: 30%;
+    display: block;
+    margin: auto;
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+
+article#location div section:first-of-type {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+article#location div section:last-of-type {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+div#window h1 {
+    text-align: center;
+}
+
+main a {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main a:hover {
+    color: rgb(150, 101, 10);
+}
+
+@media only screen and (max-width: 600px) {
+    div#aboutBackground h1 {
+        font-size: 3em;
+        height: 300px;
+        line-height: 300px;
+    }
+
+    main div#aboutBackground {
+        background-position: -800px -100px;
+        height: 300px;
+    }
+}
+
+article {
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+}
+
+article div {
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    overflow: hidden;
+}
+
+article div.open {
+    max-height: 10000px;
+    transition: max-height 1s ease-in-out;
+}
+
+article>h2 {
+    text-align: left;
+    color: orange;
+    font-size: 2.5em;
+    border-bottom: 1px solid orange;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+article>p {
+    float: right;
+    color: orange;
+    font-size: 2em;
+    margin: 0;
+    text-emphasis: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*
+
+    Styles for the curriculum
+
+*/
+
+article#cur section {
+    border: 1px solid black;
+}
+
+article#cur aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+article#cur section#sem1g1 {
+    flex: 1 1 24%;
+    order: 3;
+}
+
+article#cur section#sem1g2 {
+    flex: 1 1 24%;
+    order: 4;
+}
+
+article#cur section#sem2g1 {
+    flex: 1 1 24%;
+    order: 5;
+}
+
+article#cur section#sem2g2 {
+    flex: 1 1 24%;
+    order: 6;
+}
+
+article#cur section.sem {
+    flex: 1 1 49%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+article#cur a {
+    color: orange;
+}
+
+article#cur a:hover {
+    color: rgb(173, 113, 2);
+}
+
+article#cur section h4 {
+    font-weight: normal;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+article#cur section h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+article#cur section p {
+    margin-left: 5px;
+}
+
+article#cur section p.std {
+    font-size: 0.8em;
+    margin-top: -5px;
+}
+
+section#sem2 {
+    order: 2;
+}
+
+@media only screen and (max-width: 940px) and (min-width: 521px) {
+    article#cur section#sem1g1 {
+        flex: 1 1 49%;
+        order: 2;
+    }
+
+    article#cur section#sem1g2 {
+        flex: 1 1 49%;
+        order: 3;
+    }
+
+    article#cur section#sem2g1 {
+        flex: 1 1 49%;
+        order: 5;
+    }
+
+    article#cur section#sem2g2 {
+        flex: 1 1 49%;
+        order: 6;
+    }
+
+    article#cur section.sem {
+        flex: 1 1 100%;
+    }
+
+    article#cur section#sem2 {
+        order: 4;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    article#cur section#sem1g1 {
+        flex: 1 1 99%;
+        order: 2;
+    }
+
+    article#cur section#sem1g2 {
+        flex: 1 1 99%;
+        order: 3;
+    }
+
+    article#cur section#sem2g1 {
+        flex: 1 1 99%;
+        order: 5;
+    }
+
+    article#cur section#sem2g2 {
+        flex: 1 1 99%;
+        order: 6;
+    }
+
+    article#cur section.sem {
+        flex: 1 1 100%;
+    }
+
+    article#cur section#sem2 {
+        order: 4;
+    }
+}
+
+/*
+
+    Certification CSS
+
+*/
+
+article#cert iframe {
+    width: 100%;
+    margin: auto;
+}
+
+/*
+
+    Other Info CSS
+
+*/
+
+article#other ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: space-evenly;
+    justify-content: center
+}
+
+article#other li {
+    flex: 2 2 49%;
+    list-style-type: none;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+article#other a {
+    padding: 15px;
+    border: 1px solid orange;
+    color: orange;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: background-color 1s, color 0.1s;
+}
+
+article#other a div {
+    width: 0;
+    background-color: orange;
+}
+
+article#other a:hover {
+    background-color: orange;
+    color: white;
+}
+
+@media only screen and (max-width: 700px) {
+    article#other li {
+        flex: 2 2 100%;
+    }
+}
