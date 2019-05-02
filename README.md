@@ -1,2 +1,2 @@
 # Capstone-2019
-Hairstyling Website - Charley T, Cynthia S, Ryan W.
+Hairstyling Website - Ryan W, Mickal A
