@@ -4,60 +4,45 @@
 
 */
 
+/* Imports in the font-face named symbola using their stylesheet. */
 @import url('https://fontlibrary.org/face/symbola');
 
+/* Sets the background of the slider tsection */
 main section#sliderSection {
     background-color: rgb(207, 207, 207);
     width: 100%;
 }
 
+/* Centers the slider. */
 div#slider {
     margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+/* Sets the image in the header to be lower a little bit. */
 header>img {
     width: 100%;
     margin-bottom: -4px;
 }
 
-section.content {
-    width: 70%;
-    margin: auto;
-    max-width: 900px;
-}
-
-section.content p {
-    text-indent: 1em;
-}
-
-article {
-    /* display: flex; */
-    flex-flow: row wrap;
-}
-
-section.content {
-    flex: 1 1 auto;
-}
-
+/* 
+    Sets the size of the slider in mobile mode
+*/
 @media only screen and (max-width: 600px) {
     #slider {
         width: 100%;
     }
-
-    section.content {
-        width: 100%;
-        margin: 10px;
-    }
 }
 
+/* Sets the size of the mobile for semi-large screens */
 @media only screen and (min-width: 700px) {
     #slider {
         width: 50%;
     }
 }
 
+/* Sets the size of the header image for large screens. */
 @media only screen and (min-width: 1000px) {
     header>img {
         width: 60%;
@@ -90,11 +75,6 @@ section>nav p {
     border: 1px solid orange;
 }
 
-section>nav a:hover {
-    /* Changes the background color to gray. */
-    /* background-color: rgb(95, 94, 94); */
-}
-
 section nav>ul {
     /* Sets the display to table-row */
     display: table-row;
@@ -118,6 +98,7 @@ section nav p {
     cursor: pointer;
 }
 
+/* Set the nav links to be orange. */
 section nav a {
     color: orange;
     height: auto;
@@ -135,11 +116,13 @@ section nav a aside {
     font-size: 0.5em;
 }
 
+/* Set the font of the first letter to be symbola. */
 section nav p::first-letter {
     font-family: 'SymbolaRegular';
     font-size: 5em;
 }
 
+/* Sets the rest of the font to be 1em */
 section nav p:not(::first-letter) {
     font-size: 1em;
 }

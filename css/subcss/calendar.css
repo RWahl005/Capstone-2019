@@ -1,3 +1,8 @@
+/* 
+    CSS File for the calendar
+*/
+
+/* Adds a border to the table */
 div#calendar table {
     width: 80%;
     margin: auto;
@@ -5,6 +10,7 @@ div#calendar table {
     border-collapse: collapse;
 }
 
+/* Sets the caption (month, year_ to the center of the top of the table */
 div#calendar caption {
     width: 100%;
     caption-side: top;
@@ -12,10 +18,12 @@ div#calendar caption {
     font-size: 2em;
 }
 
+/* Sets the background of cells that are not valid dates to gray. */
 td:not(.calendarDates) {
     background-color: gray;
 }
 
+/* Sets the valid date cells to have a border of black. */
 .calendarDates {
     width: 14.28%;
     border: 1px solid black;
@@ -23,11 +31,13 @@ td:not(.calendarDates) {
     position: relative;
 }
 
+/* Sets the border around the table heads. */
 th {
     border: 1px solid black;
     height: 20px;
 }
 
+/* The calendar numbers are put in the top left corner. */
 .calendarNum {
     position: absolute;
     top: 1px;
@@ -35,60 +45,74 @@ th {
     float: left;
 }
 
+/* The current date is highlighted in a light gray. */
 #calendarToday {
     background-color: rgb(221, 218, 218);
 }
 
+/* The valid dates have a max height of 89 pixels with an overflow of auto. */
 .calendarDates {
     max-height: 89px;
     overflow: auto;
 }
 
+/* The paragraphs of the valid dates are set to have no margin. */
 .calendarDates p {
     margin: 0;
 }
 
+/* The events on the dates. */
 .calendarEvents {
     /* position: absolute; */
     max-height: 54px;
+    /* Allows them to go over the cell limit */
     overflow: auto;
     text-align: center;
     margin: auto;
 }
 
+/* When the calendar is in mobile mode the numbers are put on the left. */
 .calendarMobileNum {
     float: left;
 }
 
+/* The calendar next button is positioned by the right side of the month, year */
 .calendarNext {
+    /* Set to relative so it can be positioned. */
     position: relative;
     top: 35px;
     left: 75%;
     font-size: 1.5em;
     cursor: pointer;
+    user-select: none;
 }
 
+/* The calendar previous button is positioned by the left side of the month, year */
 .calendarPrev {
     position: relative;
     top: 35px;
     left: 25%;
     font-size: 1.5em;
     cursor: pointer;
+    /* Prevents users from selecting it. */
     user-select: none;
 }
 
+/* When the screen is greather than 1162 pixels set the width to 129 px. */
 @media only screen and (min-width: 1162px) {
     .calendarEvents {
         max-width: 129px;
     }
 }
 
+/* When the screen is less than 858 pixels set the width to 93 px. */
 @media only screen and (max-width: 858px) {
     .calendarEvents {
         max-width: 93px;
     }
 }
 
+/* When the screen is less than 715 pixels set the width to 100% and remove some of the height and width restrictions. */
 @media only screen and (max-width: 715px) {
     .calendarEvents {
         position: initial;
@@ -105,6 +129,7 @@ th {
     }
 }
 
+/* Change the position of the previous button on mobile devices. */
 @media only screen and (max-width: 480px) {
     .calendarPrev {
         left: 19%;

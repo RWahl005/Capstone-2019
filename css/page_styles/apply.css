@@ -1,3 +1,10 @@
+/* 
+
+    The CSS styles for the apply.html page.
+
+*/
+
+/* Sets the white text for the title. */
 h1 {
     text-align: center;
     color: white;
@@ -7,6 +14,7 @@ h1 {
     line-height: 400px;
 }
 
+/* Sets the background and position of the white text. */
 main div#servicesBackground {
     background-image: url('../../images/hairstyling5.jpg');
     width: 100%;
@@ -14,18 +22,21 @@ main div#servicesBackground {
     background-position: -50px -200px;
 }
 
+/* Sets the position of the background based upon the width of the browser. */
 @media only screen and (max-width: 600px) {
     main div#servicesBackground {
         background-position: -1100px -200px;
     }
 }
 
+/* Sets the position of the background based upon the width of the browser. */
 @media only screen and (max-width: 800px) {
     main div#servicesBackground {
         background-position: -500px -200px;
     }
 }
 
+/* Sets the styling of the iframe. */
 iframe {
     display: block;
     width: 95%;

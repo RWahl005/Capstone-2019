@@ -2,6 +2,7 @@
     About CSS for the about page.
 */
 
+/* Sets the h1 on the background to white and sets it to the center verticaly and horizontaly. */
 main div#aboutBackground h1 {
     text-align: center;
     color: white;
@@ -11,6 +12,7 @@ main div#aboutBackground h1 {
     line-height: 400px;
 }
 
+/* Sets the background behind the white text. */
 main div#aboutBackground {
     background-image: url('../../images/hairstyling3.jpg');
     width: 100%;
@@ -18,6 +20,15 @@ main div#aboutBackground {
     background-position: -50px -150px;
 }
 
+/*
+
+    The css for the articles.
+
+*/
+/* 
+    Location Article
+*/
+/* Sets the width of the image to 30% */
 article#location div section img {
     width: 30%;
     display: block;
@@ -28,11 +39,13 @@ article#location div section p {
     text-align: center;
 }
 
+/* Put the div element into a grid */
 article#location div {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
+/* Pick where elements go in that grid for the image */
 article#location>div>img {
     width: 30%;
     display: block;
@@ -41,12 +54,13 @@ article#location>div>img {
     grid-row: 1;
 }
 
-
+/* puts the first section into it's position in the grid */
 article#location div section:first-of-type {
     grid-column: 1;
     grid-row: 2;
 }
 
+/* pust the second section into it's position in the grid. */
 article#location div section:last-of-type {
     grid-column: 2;
     grid-row: 2;
@@ -56,16 +70,19 @@ div#window h1 {
     text-align: center;
 }
 
+/* The main links have a color of orange and are underlined. */
 main a {
     color: orange;
     text-decoration: underline;
     cursor: pointer;
 }
 
+/* When the link is hovered over the color changes. */
 main a:hover {
     color: rgb(150, 101, 10);
 }
 
+/* When the screen is in mobile, Change the position of the background image */
 @media only screen and (max-width: 600px) {
     div#aboutBackground h1 {
         font-size: 3em;
@@ -79,81 +96,134 @@ main a:hover {
     }
 }
 
+/* 
+    Generic article styling
+*/
+
+/* Set article to take up 90% of the screen */
 article {
     box-sizing: border-box;
     width: 90%;
     margin: auto;
 }
 
+/* Set the div to scroll in and  out when opened. */
 article div {
     max-height: 0;
     transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
     overflow: hidden;
 }
 
+/* Set the div to scroll back in when it is done being open. */
 article div.open {
     max-height: 10000px;
     transition: max-height 1s ease-in-out;
 }
 
+/* Sets the spoiler text to orange and be 2.5 em big. */
 article>h2 {
     text-align: left;
     color: orange;
     font-size: 2.5em;
+    /* Add an orange border to the bottom of the spoiler */
     border-bottom: 1px solid orange;
     width: 100%;
     cursor: pointer;
+    /* Prevent the user from selecting any of the text */
     user-select: none;
 }
 
+/* The arrow of the spoilers */
 article>p {
+    /* Set it to the right */
     float: right;
+    /* Set it's color to orange */
     color: orange;
+    /* Set the font size to 2 em */
     font-size: 2em;
+    /* Remove it's margins */
     margin: 0;
+    /* Set it to bold */
     text-emphasis: bold;
+    /* Show a pointer when the user hovers over it. */
     cursor: pointer;
+    /* Prevent the user from highlighting it. */
     user-select: none;
 }
 
 /*
 
-    Styles for the curriculum
+    Styles for the curriculum spoiler
 
 */
 
 article#cur section {
+    /* Sets the border for the table to black. */
     border: 1px solid black;
 }
 
+/* Sets the aside to flex */
 article#cur aside {
+    /* Set the aside to be a flex box with support for older browsers. */
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
 
+/* 
+    Set the flex position for the first grid section
+    Support for older browsers included.
+*/
 article#cur section#sem1g1 {
+    -webkit-flex: 1 1 24%;
     flex: 1 1 24%;
+    -webkit-order: 3;
     order: 3;
 }
 
+/* 
+    Set the flex position for the second grid section
+    Support for older browsers included.
+*/
 article#cur section#sem1g2 {
+    -webkit-flex: 1 1 24%;
     flex: 1 1 24%;
+    -webkit-order: 4;
     order: 4;
 }
 
+/* 
+    Set the flex position for the third grid section
+    Support for older browsers included.
+*/
 article#cur section#sem2g1 {
+    -webkit-flex: 1 1 24%;
     flex: 1 1 24%;
+    -webkit-order: 5;
     order: 5;
 }
 
+/* 
+    Set the flex position for the forth grid section
+    Support for older browsers included.
+*/
 article#cur section#sem2g2 {
+    -webkit-flex: 1 1 24%;
     flex: 1 1 24%;
+    -webkit-order: 6;
     order: 6;
 }
 
+/* 
+    Set the flex position for the first semester text section
+    Support for older browsers included.
+*/
 article#cur section.sem {
+    -webkit-flex: 1 1 49%;
     flex: 1 1 49%;
     background-color: orange;
     color: white;
@@ -169,9 +239,13 @@ article#cur a:hover {
     color: rgb(173, 113, 2);
 }
 
+/* Set the styles for the h4s */
 article#cur section h4 {
+    /* Change the default to what is desired. */
+    /* Removes the bold from the text. */
     font-weight: normal;
     text-decoration: underline;
+    /* Sets the font to italic */
     font-style: italic;
     text-align: center;
     font-size: 1.05em;
@@ -186,71 +260,100 @@ article#cur section p {
     margin-left: 5px;
 }
 
+/* Set the styling for the standards paragraph tags. */
 article#cur section p.std {
     font-size: 0.8em;
     margin-top: -5px;
 }
 
+/* Set the order for the second semester text. */
 section#sem2 {
+    -webkit-order: 2;
     order: 2;
 }
 
+/* Table styles for the table */
 @media only screen and (max-width: 940px) and (min-width: 521px) {
+
+    /* Change all of the styles to be in a 2x2 grid */
     article#cur section#sem1g1 {
+        -webkit-flex: 1 1 49%;
         flex: 1 1 49%;
+        -webkit-order: 2;
         order: 2;
     }
 
     article#cur section#sem1g2 {
+        -webkit-flex: 1 1 49%;
         flex: 1 1 49%;
+        -webkit-order: 3;
         order: 3;
     }
 
     article#cur section#sem2g1 {
+        -webkit-flex: 1 1 49%;
         flex: 1 1 49%;
+        -webkit-order: 5;
         order: 5;
     }
 
     article#cur section#sem2g2 {
+        -webkit-flex: 1 1 49%;
         flex: 1 1 49%;
+        -webkit-order: 6;
         order: 6;
     }
 
     article#cur section.sem {
+        -webkit-flex: 1 1 100%;
         flex: 1 1 100%;
     }
 
     article#cur section#sem2 {
+        -webkit-order: 4;
         order: 4;
     }
 }
 
+/* Set the styles for mobile devices */
 @media only screen and (max-width: 520px) {
+
+    /* Changes the flex to display a single column. */
     article#cur section#sem1g1 {
+        -webkit-flex: 1 1 99%;
         flex: 1 1 99%;
+        -webkit-order: 2;
         order: 2;
     }
 
     article#cur section#sem1g2 {
+        -webkit-flex: 1 1 99%;
         flex: 1 1 99%;
+        -webkit-order: 3;
         order: 3;
     }
 
     article#cur section#sem2g1 {
+        -webkit-flex: 1 1 99%;
         flex: 1 1 99%;
+        -webkit-order: 5;
         order: 5;
     }
 
     article#cur section#sem2g2 {
+        -webkit-flex: 1 1 99%;
         flex: 1 1 99%;
+        -webkit-order: 6;
         order: 6;
     }
 
     article#cur section.sem {
+        -webkit-flex: 1 1 100%;
         flex: 1 1 100%;
     }
 
     article#cur section#sem2 {
+        -webkit-order: 4;
         order: 4;
     }
 }
@@ -272,28 +375,37 @@ article#cert iframe {
 
 */
 
+/* Set the ul list to be in a flex box. */
 article#other ul {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     box-sizing: border-box;
+    /* Align the content of the list. */
     align-content: space-evenly;
     justify-content: center
 }
 
+/* Set the list items to be positioned in that flex box. */
 article#other li {
+    -webkit-flex: 2 2 49%;
     flex: 2 2 49%;
     list-style-type: none;
     box-sizing: border-box;
     margin-bottom: 40px;
 }
 
+/* The links of the list. */
 article#other a {
     padding: 15px;
     border: 1px solid orange;
     color: orange;
     text-decoration: none;
     font-size: 1.3em;
+    /* Gives them a transition so they change when thay are hovered over. */
     transition: background-color 1s, color 0.1s;
 }
 
@@ -307,8 +419,10 @@ article#other a:hover {
     color: white;
 }
 
+/* Sets the buttons in a single file order for mobile. */
 @media only screen and (max-width: 700px) {
     article#other li {
+        -webkit-flex: 2 2 100%;
         flex: 2 2 100%;
     }
 }

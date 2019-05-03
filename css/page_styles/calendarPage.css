@@ -1,3 +1,14 @@
+/* 
+
+    The CSS Styles for the calendar.html page.
+
+*/
+
+/* 
+    Sets the Styles for the event types.
+*/
+
+/* The first day of school event is green. */
 .calendarFirstDay {
     width: 100%;
     padding: 5px;
@@ -6,19 +17,20 @@
     text-align: center;
     max-width: none;
     cursor: pointer;
-
-    /* position: static; */
 }
 
+/* Set the size of the table p to a width of 100% */
 table p {
     width: 100%;
 }
 
+/* Set the table headers to orange. */
 table th {
     background-color: orange;
     color: white;
 }
 
+/* Set all calendarEvents to have a width of 100% and a display of block. */
 .calendarEvents {
     width: 100%;
     display: block;
@@ -28,6 +40,7 @@ table th {
     max-width: none;
 }
 
+/* When the event is a holiday, set it to orange. */
 .calendarHoliday {
     width: 100%;
     padding: 5px;
@@ -38,6 +51,7 @@ table th {
     cursor: pointer;
 }
 
+/* When the event is a teacher professional day, set it to blue. */
 .calendarTeachProf {
     width: 100%;
     padding: 5px;
@@ -49,6 +63,7 @@ table th {
     color: white;
 }
 
+/* When the tevent is the last day of school, set it to red. */
 .calendarLastDay {
     width: 100%;
     padding: 5px;
@@ -63,6 +78,7 @@ main>p {
     text-align: center;
 }
 
+/* Set the link under the table to orange. */
 main>p>a {
     color: orange;
 }
