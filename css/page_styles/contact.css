@@ -1,3 +1,10 @@
+/* 
+
+    The CSS styles for the contact.html page with some being for the confirm.html file.
+
+*/
+
+/* Sets the white text for the title */
 h1 {
     text-align: center;
     color: white;
@@ -7,6 +14,7 @@ h1 {
     line-height: 400px;
 }
 
+/* Sets the background image of the page for the white text. */
 main div#servicesBackground {
     background-image: url('../../images/hairstyling8.jpg');
     width: 100%;
@@ -14,6 +22,7 @@ main div#servicesBackground {
     background-position: -50px -600px;
 }
 
+/* When in mobile, change the background position to look good. */
 @media only screen and (max-width: 600px) {
     main div#servicesBackground {
         background-position: -550px -600px;
@@ -26,51 +35,67 @@ main div#servicesBackground {
 
 */
 
+/* Remove the field set border. */
 fieldset {
     border: none;
 }
 
+/* Set the legends to look good */
 legend {
     width: 100%;
+    /* Add an orange border on the bottom. */
     border-bottom: 1px solid orange;
     font-size: 2em;
     color: orange;
 }
 
+/* Set the sections to have a width of 75% */
 section {
     width: 75%;
     margin: auto;
 }
 
+/* Set the inputs to have a display of block. */
 input {
     display: block;
 }
 
+/* Set the text area widht and height. */
 textarea {
     width: 100%;
     height: 200px;
+    /* Prevent the user from resizing the text area. */
     resize: none;
 }
 
+/* When the phone and email is valid, set the background color to green. */
 #phn:valid,
 #email:valid {
     background-color: rgba(24, 230, 24, 0.61);
 }
 
+/* When the phone and email is invalid, set the background color to red. */
 #phn:invalid,
 #email:invalid {
     background-color: rgba(255, 0, 0, 0.397);
 }
 
+/* Stylize the submit button. */
 #submit {
+    /* Set the display of it to block. */
     display: block;
+    /* Have it take up 20% of the width. */
     width: 20%;
+    /* Center it horizontaly */
     margin: auto;
+    /* Set the height to 40 pixels. */
     height: 40px;
+    /* Set the background color to orange. */
     background-color: orange;
     font-size: 1.5em;
     color: white;
     cursor: pointer;
+    /* Give it a transition so when it is hovered over it changes color. */
     transition: background-color 0.3s;
 }
 
@@ -91,6 +116,7 @@ p {
     text-align: center;
 }
 
+/* Stylize the buttons of the confirm.html page */
 div#but {
     width: 15%;
     margin: auto;
@@ -102,6 +128,7 @@ div#but button {
     background-color: orange;
     color: white;
     cursor: pointer;
+    /* When the buttons are hovered over, fade into a background color. */
     transition: background-color 0.3s;
 }
 
@@ -109,12 +136,14 @@ div#but button:hover {
     background-color: rgb(182, 127, 24);
 }
 
+/* Sets the width of the submit button on mobile. */
 @media only screen and (max-width: 600px) {
     #submit {
         width: 40%;
     }
 }
 
+/* Sets the width of the inputs. */
 input {
     width: 320px;
 }

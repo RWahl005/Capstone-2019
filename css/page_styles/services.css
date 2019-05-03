@@ -1,3 +1,12 @@
+/* 
+
+    The CSS Styles for the services.html page.
+
+*/
+
+/* 
+    The styles for setting the white text with the background
+*/
 h1 {
     text-align: center;
     color: white;
@@ -31,77 +40,95 @@ article {
     margin: auto;
 }
 
+/* Allow the dropdown to scroll out */
 article div {
     max-height: 0;
     transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
     overflow: hidden;
 }
 
+/* Allow the dropdown to scroll in */
 article div.open {
     max-height: 10000px;
     transition: max-height 1s ease-in-out;
 }
 
+/* Sets the spoiler text to orange and be 2.5 em big. */
 article>h2 {
     text-align: left;
     color: orange;
     font-size: 2.5em;
+    /* Add an orange border to the bottom of the spoiler */
     border-bottom: 1px solid orange;
     width: 100%;
     cursor: pointer;
+    /* Prevent the user from selecting any of the text */
     user-select: none;
 }
 
+/* The arrow of the spoilers */
 article>p {
+    /* Set it to the right */
     float: right;
+    /* Set it's color to orange */
     color: orange;
+    /* Set the font size to 2 em */
     font-size: 2em;
+    /* Remove it's margins */
     margin: 0;
+    /* Set it to bold */
     text-emphasis: bold;
+    /* Show a pointer when the user hovers over it. */
     cursor: pointer;
+    /* Prevent the user from highlighting it. */
     user-select: none;
 }
 
+/* Set the background of the services menu. */
 article#serv div {
+    display: -webkit-flex;
     display: flex;
     border-collapse: collapse;
     background-image: linear-gradient(rgba(248, 170, 26, 0.901), rgba(214, 147, 22, 0.901));
     background-size: 100%;
-
-
-}
-
-article#serv div>section,
-article#serv div>section>section {
-    /* border: 1px solid orange; */
 }
 
 article#serv div>section>section:first-of-type {
     border-bottom: 0;
 }
 
+/* Remove the borders for some of the sections. */
 article#serv div>section>section {
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
 }
 
+/* 
+    Define when the services are in the flex menu.
+*/
+
 article#serv section#serv1 {
+    -webkit-flex: 1 1 39%;
     flex: 1 1 39%;
 }
 
 article#serv section#serv2 {
+    -webkit-flex: 1 1 9%;
     flex: 1 1 9%;
 }
 
 article#serv section#serv3 {
+    -webkit-flex: 1 1 39%;
     flex: 1 1 39%;
 }
 
 article#serv section#serv4 {
+    -webkit-flex: 1 1 9%;
     flex: 1 1 9%;
 }
 
+/*  Sets the color of the text to white. */
 article#serv section section p {
     color: white;
     font-size: 1.3em;
@@ -118,6 +145,7 @@ article#serv section section p:last-of-type {
     margin-left: 20px;
 }
 
+/* Prevents container collapse on the sections */
 article#serv section section::after {
     display: table;
     content: "";
@@ -129,6 +157,7 @@ article#serv section section section {
     color: white;
 }
 
+/* Sets the display of h2s */
 article#serv section h2 {
     color: white;
     font-size: 1.5em;
@@ -140,22 +169,29 @@ article#serv div {
     margin-bottom: 10px;
 }
 
+/* Sets the navigations to flex */
 main>nav ul {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     box-sizing: border-box;
     align-content: space-evenly;
     justify-content: center;
 }
 
+/* Set the flex position for the list items */
 main>nav li {
+    -webkit-flex: 2 2 49%;
     flex: 2 2 49%;
     list-style-type: none;
     box-sizing: border-box;
     margin-bottom: 40px;
 }
 
+/* Set the link styles so that when it is hovered it transitions. */
 main>nav a {
     padding: 15px;
     border: 1px solid orange;
@@ -165,12 +201,13 @@ main>nav a {
     transition: background-color 1s, color 0.1s;
 }
 
-
+/* If it is not the hours */
 main>nav a:not(#hours):hover {
     background-color: orange;
     color: white;
 }
 
+/* Set the image side. */
 main>img {
     width: 30%;
     margin: auto;
@@ -182,8 +219,10 @@ main>nav li {
 }
 
 
+/* Set the flex for the links in mobile mode. */
 @media only screen and (max-width: 550px) {
     main>nav li {
+        -webkit-flex: 2 2 100%;
         flex: 2 2 100%;
     }
 }

@@ -1,3 +1,12 @@
+/* 
+
+    The CSS Styles for the ctso.html page.
+
+*/
+
+/* 
+    The styles for setting the white text with the background
+*/
 h1 {
     text-align: center;
     color: white;
@@ -19,6 +28,7 @@ main div#ctsoBackground {
         background-position: -400px -350px;
     }
 
+    /* The article image is change to a width of 30% on mobile. */
     article img {
         width: 30%;
         display: block;
@@ -26,7 +36,12 @@ main div#ctsoBackground {
 
 }
 
+/* 
+    The main styles
+*/
+
 main>img {
+    /* Sets the image to be centered. */
     width: 30%;
     display: block;
     margin: auto;
@@ -40,16 +55,19 @@ h2 {
 }
 
 article img {
+    /* Sets the iamge to be displayed on the left. */
     width: 20%;
     float: left;
 }
 
 article {
+    /* Centers the article */
     width: 70%;
     margin: auto;
     margin-bottom: 1em;
 }
 
+/* Prevents container collapse in the article. */
 article::after {
     content: "";
     display: table;
@@ -64,6 +82,7 @@ article a:hover {
     color: rgb(151, 100, 5);
 }
 
+/* Sets the size of the images in mobile mode. */
 @media only screen and (max-width: 600px) {
 
     article img {

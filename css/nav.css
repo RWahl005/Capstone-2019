@@ -1,11 +1,15 @@
 /* 
     The css file for the navigation bar.
+    All pages use this.
 */
 
-#navicon{
+/* Prevents the navicon from displaying (Showing it is handled by javascript) */
+#navicon {
     display: none;
 }
 
+
+/* If the The screen is wider than 980 pixels */
 @media only screen and (min-width: 980px) {
 
     /* Nav bar styles */
@@ -14,6 +18,7 @@
         width: 25%;
     }
 
+    /* Set the ul to inline and remove the bullent points */
     header ul {
         display: inline;
         list-style: none;
@@ -24,6 +29,7 @@
         padding: 30px;
     }
 
+    /* Sets the font to Roboto slong with the size to 1em. */
     header a {
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
@@ -32,6 +38,7 @@
         position: relative;
     }
 
+    /* If the bar is not active, setup the orange bar under it and add in transitions.*/
     header a:not(.active)::before {
         content: "";
         position: absolute;
@@ -40,14 +47,19 @@
         bottom: -4px;
         background-color: orange;
         visibility: hidden;
+        /* Set the scale to zero. */
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
+        /* transition through everything for 0.3 seconds. */
         -webkit-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s;
     }
 
+    /* When the link is hovered over. */
     header a:not(.active):hover::before {
+        /* Show the bar. */
         visibility: visible;
+        /* Scales it back down when the mouse is move off of it. */
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
@@ -60,6 +72,7 @@
         color: orange;
     }
 
+    /* Show the oragne bar when the link is active. */
     header a.active::before {
         content: "";
         position: absolute;
@@ -70,12 +83,14 @@
         visibility: visible;
     }
 
+    /* Put an orange border bottom on the nav */
     header nav {
         background-color: white;
         /* position: ; */
         border-bottom: 3px solid #F7941E;
     }
 
+    /* Prevent content collapse on the nav. */
     header nav::after {
         clear: both;
         content: "";
@@ -83,6 +98,7 @@
     }
 }
 
+/* If in (Tablet) mode, put the links on their own line from the logo (It's the same as above the the ul is set as block)*/
 @media only screen and (min-width: 680px) and (max-width: 980px) {
 
     /* Nav bar styles */
@@ -165,7 +181,10 @@
     }
 }
 
+/* If in mobile mode */
 @media only screen and (max-width: 680px) {
+
+    /* Make the logo take up 100% of the width. */
     img#logo {
         width: 100%;
         margin-bottom: -5px;
@@ -216,28 +235,30 @@
         padding: 5px;
     }
 
-    header nav a:hover{
+    header nav a:hover {
         background-color: black;
     }
 
-    header nav a.active{
+    header nav a.active {
         background-color: black;
     }
 }
 
-#navicon img{
+/* When the image is clicked it rotates 90 degrees */
+#navicon img {
     width: 10%;
     transition: transform 0.5s;
 }
 
-#navicon:hover{
+#navicon:hover {
     background-color: orange;
 }
 
-#navicon{
+#navicon {
     padding: 0;
 }
 
-.rotated{
+/* Added by javascript to rotate the navicon. */
+.rotated {
     transform: rotate(90deg);
 }
