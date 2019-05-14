@@ -48,10 +48,10 @@ footer a:hover {
 
 /* A special footer that deals with putting itself on the bottom. */
 footer#bottom {
-    position: relative;
-    bottom: 1px;
+    /* Allows the footer to be positioned at the bottom. */
+    position: sticky;
+    bottom: 0;
     width: 100%;
-    margin-top: 10px;
 }
 
 /* Removes padding and margin from the body. */
